@@ -10,11 +10,11 @@ info: rtl8188fu support will be add to rtl8xxxu module of Linux kernel.  noumanj
 
 `sudo apt-get install build-essential git dkms linux-headers-$(uname -r)`
 
-`git clone https://github.com/kelebek333/rtl8188fu`
+`git clone https://github.com/noumanjaved786/rtl8188ftv.git`
 
 `sudo dkms install ./rtl8188fu`
 
-`sudo cp ./rtl8188fu/firmware/rtl8188fufw.bin /lib/firmware/rtlwifi/`
+`sudo cp ./rtl8188fu/rtl8188fufw.bin /lib/firmware/rtlwifi/`
 
 ------------------
 
@@ -51,16 +51,6 @@ If you are using kernel 5.15 and 5.16, you must create a configuration file with
 If you are using kernel 6.2 and up, you must create a configuration file with following command for preventing to conflict rtl8188fu module with built-in rtl8xxxu module.
 
 `echo 'alias usb:v0BDApF179d*dc*dsc*dp*icFFiscFFipFFin* rtl8188fu' | sudo tee /etc/modprobe.d/rtl8xxxu-blacklist.conf`
-
-##### Then you must update initramfs
-
-For initramfs
-
-`sudo update-initramfs -u`
-
-For dracut
-
-`sudo dracut -q --force`
 
 ##### Enable rtl8188fu module
 
