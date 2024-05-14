@@ -93,3 +93,15 @@ for xUbuntu 16.04-18.04-20.04-22.04-23.04-23.10 / Linux Mint 20.x-21.x
 You can purge packages with following commands
 
 `sudo apt purge rtl8188fu-dkms`
+
+-------------------
+
+## install in Kali Linux
+
+`sudo apt-get install build-essential git dkms linux-headers-$(uname -r)`
+
+`git clone https://github.com/noumanjaved786/rtl8188ftv.git`
+
+`sudo cp ./rtl8188fu/rtl8188fufw.bin /lib/firmware/rtlwifi/`
+
+------------------
